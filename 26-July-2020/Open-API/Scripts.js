@@ -11,13 +11,3 @@ request.onload = function() {
 var data = JSON.parse(this.response)
 console.log(data);
 }
-
-
-/*
-var proxy = "https://cors-anywhere.herokuapp.com/"
-var url_string1 ="https://dog.ceo/api/breeds/list/all";
-var url_string2 =  "https://api.domainsdb.info/v1/domains/search?domain=facebook&zone=com"
-fetch(url_string2) // Call the fetch function passing the url of the API as a parameter
-.then(res=>res.json())
-.then(data=>console.log(data))
-*/
