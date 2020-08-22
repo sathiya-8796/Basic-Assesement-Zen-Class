@@ -1,0 +1,21 @@
+.header{
+    background-color: grey;
+    text-align: center;
+    color: white;
+    font-family: Arial;
+    font-size: small;
+}
+
+ .asterisk{
+     color: red
+ }
+table,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    padding: 2px;
+}
+*{
+    font-family: Arial;
+    font-size: small;
+}
