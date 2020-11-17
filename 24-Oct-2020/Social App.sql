@@ -1,0 +1,27 @@
+create database insta_app;
+use insta_app;
+create table profile_status (id int(200), status_info varchar(1000));
+Insert into profile_status (id, status_info) values (1,'Active'), (2, 'Deactive'), (3, 'Blocked'), (4, 'Reported'), (5, 'Deleted');
+create table user_profile (Name varchar(1000), gmail varchar(1000));
+Insert into user_profile (Name, gmail) values ("sathiya", 'axy@gmail.com'), ('priya', 'abc@gmail.com'), ('ramya', 'www@gmail.com'), ('chahar', 'ccc@gmail.com'), ('divya', 'ddd@gmail.com');
+select * from user_profile;
+create table friends (id int(200), f_name varchar(1000));
+insert into friends(id, f_name) values (1,'sathiya'), (2,'priya'), (3,'ramya'), (4,'chahar'), (5,'divya');
+select * from friends;
+create table comments (id int (200), f_name varchar(500), comment_text varchar (1000));
+insert into comments(id, f_name, comment_text) values (1, 'sathiya', "Beautiful photo"), (2, 'priya', "Nice dress"), (3, 'priya', "where did you get?"), (4, 'chahar', "Where didi u go for outing?"), (5, 'sathiya', "Its been a long c, chahar");
+select * from comments;
+create table likes (id int(200), likes varchar (100));
+insert into likes (id, likes) values (1, '4likes'), (2, '6likes'), (3, '8likes'), (4, '44likes'), (5, '88likes');
+select * from likes;
+create table user_login_details (id int(200), f_name varchar(500), username varchar (1000), pswd varchar (1000));
+insert into user_login_details (id, f_name, username, pswd) values (1, 'sathiya', 'satpeppy01', '********'), (2, 'priya', 'priyaprincess', '***********'), (3, 'ramya', 'ramem03', '***********'), (4, 'chahar', 'chahrep04', '***********'), (5, 'divya', 'divvyyy05', '******');
+select * from user_login_details;
+create table posts (id int(200), share_counts varchar(1000));
+insert into posts(id, share_counts) values (1, '22shares'), (2, '24shares'), (3, '44shares'), (4, '66shares'), (5, '88shares');
+select * from posts;
+select * from posts where id = 5;
+select * from user_profile where gmail like "%gmail%";
+select * from comments where id = 3 limit 3;
+select profile_status.id, user_profile.id, user_profile.f_name from profile_status inner join user_profile on user_profile.id = profile_status.id inner join user_login_detailss on user_profile.id = user_login_details.id order by id ASC;
+
